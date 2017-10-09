@@ -1,0 +1,18 @@
+$bb-background-position-default: (
+	"import": true,
+	"modifiers": (
+		"top": "background-position-top",
+		"center": "background-position-center",
+		"bottom": "background-position-bottom"
+	)
+);
+
+$bb-background-position: () !default;
+
+$bb-background-position: map-merge($bb-background-position-default, $bb-background-position);
+
+@if (map-get($bb-background-position, "import") == true) {
+	@each $k, $v in map-deep-get($bb-background-position, "modifiers") {
+		@include helpers("#{$v}", "background-position: #{$k}");
+	}
+}

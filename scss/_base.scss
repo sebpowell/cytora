@@ -1,0 +1,50 @@
+$bb-border-radius-scale: 5;
+
+$bb-breakpoints: ("m": 780px, "l": 1200px) !default;
+
+$bb-colors: (
+
+	"brand": #00A294,
+
+) !default;
+
+$bb-fonts: () !default;
+
+$bb-letter-spacing: () !default;
+
+$bb-line-heights: () !default;
+
+$bb-grid: (
+	"gutter": 20px,
+	"breakpoint": 780px,
+) !default;
+
+$bb-global-delimiter: "-" !default;
+
+$bb-global-delimiter-second: "-" !default;
+
+$bb-hover-class-name: "hover" !default;
+
+$bb-max-width-scale: 12 !default;
+
+$bb-responsive: true !default;
+
+$bb-normalize: true !default;
+
+$bb-shadows: () !default;
+
+$bb-spacing-scale: 10 !default;
+
+$bb-spacing-base: 5px !default;
+
+$bb-text-sizes: (
+	18: 18px,
+	20: 20px,
+	24: 24px,
+	28: 28px,
+	32: 32px,
+) !default;
+
+@import "mixins/mixins";
+
+@import "modules/modules";

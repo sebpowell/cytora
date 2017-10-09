@@ -1,0 +1,22 @@
+$bb-background-size-default: (
+	"import": true,
+	"name": "background-size",
+	"modifiers": (
+		"cover": "cover",
+		"contain": "contain",
+		"100%": "100"
+	)
+);
+
+$bb-background-size: () !default;
+
+$bb-background-size: map-merge($bb-background-size-default, $bb-background-size);
+
+@if (map-get($bb-background-size, "import") == true) {
+
+	$className: map-get($bb-background-size, "name");
+
+	@each $k, $v in map-deep-get($bb-background-size, "modifiers") {
+		@include helpers("#{$className}#{$bb-global-delimiter}#{$v}", "background-size: #{$k}");
+	}
+}

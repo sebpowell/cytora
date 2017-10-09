@@ -1,0 +1,24 @@
+$bb-opacity-default: (
+	"import": true,
+	"name": "opacity"
+);
+
+$bb-opacity: () !default;
+
+$bb-opacity: map-merge($bb-opacity-default, $bb-opacity);
+
+@if (map-get($bb-opacity, "import") == true) {
+
+	$className: map-get($bb-opacity, "name");
+	
+	$i: 0;
+	
+	@while $i <= 10 {
+	
+		.#{$className}#{$bb-global-delimiter}#{$i} {
+			opacity: $i * 0.1;
+		}
+	
+		$i: $i + 1;
+	}
+}

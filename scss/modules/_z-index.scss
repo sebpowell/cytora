@@ -1,0 +1,36 @@
+$bb-z-index-settings-default: (
+	"import": true,
+	"name": "z-index"
+);
+
+$bb-z-index-settings: () !default;
+
+$bb-z-index-settings: map-merge($bb-z-index-settings-default, $bb-z-index-settings);
+
+@if (map-get($bb-z-index-settings, "import") == true) {
+
+	$className: map-get($bb-z-index-settings, "name");
+	
+	$i: 0;
+
+	@while $i <= 10 {
+		
+		.#{$className}#{$bb-global-delimiter}#{$i} {
+			z-index: $i;
+		}
+
+		$i: $i + 1;
+	}
+
+	.#{$className}#{$bb-global-delimiter}99 { 
+		z-index: 99;
+	}
+
+	.#{$className}#{$bb-global-delimiter}999 { 
+		z-index: 999;
+	}
+
+	.#{$className}#{$bb-global-delimiter}9999 { 
+		z-index: 9999;
+	}
+}

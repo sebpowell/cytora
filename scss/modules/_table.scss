@@ -1,0 +1,24 @@
+$bb-table-settings-default: (
+	"import": true,
+	"modifiers": (
+		"table-layout-fixed": "table-layout-fixed",
+		"border-collapse": "table-border-collapse"
+	)
+);
+
+$bb-table-settings: () !default;
+
+$bb-table-settings: map-merge($bb-table-settings-default, $bb-table-settings);
+
+@if (map-get($bb-table-settings, "import") == true) {
+
+	.#{map-deep-get($bb-table-settings, "modifiers", "border-collapse")} {
+	    border-collapse: collapse;
+	    border-spacing: 0;
+	}
+
+	.#{map-deep-get($bb-table-settings, "modifiers", "table-layout-fixed")} {
+	    table-layout: fixed;
+	}
+}
+

@@ -1,0 +1,23 @@
+$bb-position-settings-default: (
+	"import": true,
+	"name": "position",
+	"modifiers": (
+		"absolute": "absolute",
+		"static": "static",
+		"relative": "relative",
+		"fixed": "fixed"
+	)
+);
+
+$bb-position-settings: () !default;
+
+$bb-position-settings: map-merge($bb-position-settings-default, $bb-position-settings);
+
+@if (map-get($bb-position-settings, "import") == true) {
+
+	$className: map-get($bb-position-settings, "name");
+
+	@each $key, $value in map-deep-get($bb-position-settings, "modifiers") {
+		@include helpers("#{$className}#{$bb-global-delimiter}#{$value}", "position: #{$key}");
+	}
+}

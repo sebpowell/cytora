@@ -1,0 +1,29 @@
+$bb-box-shadow-default: (
+	"import": true,
+	"name": "box-shadow"
+);
+
+$bb-box-shadow: () !default;
+
+$bb-box-shadow: map-merge($bb-box-shadow-default, $bb-box-shadow);
+
+@if (map-get($bb-box-shadow, "import") == true) {
+
+	$className: map-get($bb-box-shadow, "name");
+
+	.no#{$bb-global-delimiter}#{$className} {
+		box-shadow: none !important;
+	}
+	
+	@each $name, $size in $bb-shadows {
+		.#{$className}#{$bb-global-delimiter}#{$name} {
+			box-shadow: $size;
+		}
+		
+		.#{$className}#{$bb-global-delimiter}#{$name}#{$bb-global-delimiter}#{$bb-hover-class-name} {
+			&:hover {
+				box-shadow: $size;
+			}
+		}
+	}
+}

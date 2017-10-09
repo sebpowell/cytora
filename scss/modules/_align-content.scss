@@ -1,0 +1,21 @@
+$bb-align-content-default: (
+	"import": true,
+	"modifiers": (
+		"center": "align-content-center",
+		"stretch": "align-content-stretch",
+		"flex-start": "align-content-flex-start",
+		"flex-end": "align-content-flex-end",
+		"space-between": "align-content-space-between",
+		"space-around": "align-content-space-around" 
+	)
+);
+
+$bb-align-content: () !default;
+
+$bb-align-content: map-merge($bb-align-content-default, $bb-align-content);
+
+@if (map-get($bb-align-content, "import") != false) {
+	@each $k, $v in map-deep-get($bb-align-content, "modifiers") {
+		@include helpers("#{$v}", "align-content: #{$k}");
+	}
+}

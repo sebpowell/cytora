@@ -1,0 +1,23 @@
+$bb-height-default: (
+	"import": true,
+	"name": "height"
+);
+
+$bb-height: () !default;
+
+$bb-height: map-merge($bb-height-default, $bb-height);
+
+@if (map-get($bb-height, "import") == true) {
+
+	$className: map-get($bb-height, "name");
+
+	$sizes: 25, 50, 75, 100;
+
+	@each $size in $sizes {
+		@include helpers("#{$className}#{$bb-global-delimiter}#{$size}", "height: #{$size}%");
+	}
+
+	.#{$className}#{$bb-global-delimiter}auto {     
+		height: auto !important;
+	}
+}

@@ -1,0 +1,151 @@
+extends  _inc/_layout.jade
+
+block variables
+	- var next = "grid";
+
+block body
+
+	script.
+		$(document).ready(function() {
+			$(".solution-tabs-navigation a").on("click", function(e) {
+				
+				e.preventDefault();
+
+				$(".solution-tabs-navigation a").removeClass("is-active");
+
+				$(this).addClass("is-active");
+
+				var selected = $(this).attr("href");
+
+				$(".solution-tabs-panel").removeClass("is-open");
+
+				$("#"+selected).addClass("is-open");
+			});
+		});
+
+	.section
+		.container.max-width-700.margin-auto
+			p.text-24.text-32-above-medium.text-brand.weight-bold Reveal growth opportunities within your existing portfolio and profitable new segments outside of your exposure.
+			p.text-16.text-18-above-medium There are good and bad segments in every area of the market. To identify where to target new business and where to improve risk selection and pricing on the in-force book, you need access to a market-wide view of risks to guide your decision making.
+			p.text-16.text-18-above-medium The Cytora Risk Engine transforms data from thousands of sources into an exhaustive market-wide view of risk, revealing growth opportunities within your existing portfolio and profitable new segments outside of your exposure.
+
+			a(href="#" class="button button-brand") Read the case study
+
+	.section.background-brand
+		.container.max-width-1200
+			h2.section-title.text-white Premium growth toolkit
+			.solution-tabs
+				ul.solution-tabs-navigation
+					li
+						a.inner.is-active(href="1")
+							.product-icon
+								+icon(68, "test", "product-icon-glyph")
+								.product-icon-text Predictive Lead Generation
+					li
+						a.inner(href="2")
+							.product-icon
+								+icon(68, "test", "product-icon-glyph")
+								.product-icon-text Predictive Lead Generation
+
+					li
+						a.inner(href="3")
+							.product-icon
+								+icon(68, "test", "product-icon-glyph")
+								.product-icon-text Predictive Lead Generation
+
+					li
+						a.inner(href="4")
+							.product-icon
+								+icon(68, "test", "product-icon-glyph")
+								.product-icon-text Predictive Lead Generation
+
+
+				.solution-tabs-body
+					.solution-tabs-panel.is-open(id="1")
+						.display-table-above-medium
+							.solution-tabs-panel-left
+								ul.solution-tabs-indicator
+									li.is-active Strategy
+									li Distribution
+									li Price
+								p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+								//- +icon(68, "test")
+
+								ul.solutions-tabs-feature-list
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+							
+							.solution-tabs-panel-right.display-table-cell.text-center.vertical-align-middle.text-right
+								img.solution-tabs-illustration(src="images/illustrations/1.png")
+
+					.solution-tabs-panel(id="2")
+						.display-table-above-medium
+							.solution-tabs-panel-left
+								ul.solution-tabs-indicator
+									li.is-active Strategy
+									li Distribution
+									li Price
+								p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+								//- +icon(68, "test")
+
+								ul.solutions-tabs-feature-list
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+							
+							.solution-tabs-panel-right.display-table-cell.text-center.vertical-align-middle.text-right
+								img.solution-tabs-illustration(src="images/illustrations/1.png")
+
+					.solution-tabs-panel(id="3")
+						.display-table-above-medium
+							.solution-tabs-panel-left
+								ul.solution-tabs-indicator
+									li.is-active Strategy
+									li Distribution
+									li Price
+								p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+								//- +icon(68, "test")
+
+								ul.solutions-tabs-feature-list
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+							
+							.solution-tabs-panel-right.display-table-cell.text-center.vertical-align-middle.text-right
+								img.solution-tabs-illustration(src="images/illustrations/1.png")
+
+					.solution-tabs-panel(id="4")
+						.display-table-above-medium
+							.solution-tabs-panel-left
+								ul.solution-tabs-indicator
+									li.is-active Strategy
+									li Distribution
+									li Price
+								p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+								//- +icon(68, "test")
+
+								ul.solutions-tabs-feature-list
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+									li
+										img(src="images/icons/tick.png")
+										p Identify profitable micro-segments to target compared to market prices.
+							
+							.solution-tabs-panel-right.display-table-cell.text-center.vertical-align-middle.text-right
+								img.solution-tabs-illustration(src="images/illustrations/1.png")
+
+	
+	.section
+		h2.section-title Cytora’s unique approach to risk selection and pricing
+

@@ -1,0 +1,24 @@
+$bb-text-transform-settings-default: (
+	"import": true,
+	"name": "text",
+	"modifiers": (
+		"uppercase": "uppercase",
+		"lowercase": "lowercase",
+		"capitalize": "capitalize"
+	)
+);
+
+$bb-text-transform-settings: () !default;
+
+$bb-text-transform-settings: map-merge($bb-text-transform-settings-default, $bb-text-transform-settings);
+
+@if (map-get($bb-text-transform-settings, "import") == true) {
+	
+	$className: map-get($bb-text-transform-settings, "name");
+
+	@each $key, $value in map-deep-get($bb-text-transform-settings, "modifiers") {
+		.#{$className}#{$bb-global-delimiter}#{$value} {
+			text-transform: unquote($key);
+		}
+	}
+}

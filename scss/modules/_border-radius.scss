@@ -1,0 +1,87 @@
+$bb-border-radius-default: (
+	"import": true,
+	"name": "border-radius",
+	"modifiers": (
+		"top": "top",
+		"top-left": "top-left",
+		"top-right": "top-right",
+		"bottom": "bottom",
+		"bottom-left": "bottom-left",
+		"bottom-right": "bottom-right"
+	)
+);
+
+$bb-border-radius: () !default;
+
+$bb-border-radius: map-merge($bb-border-radius-default, $bb-border-radius);
+
+@if (map-get($bb-border-radius, "import") == true) {
+
+	$i: 1;
+
+	$className: map-get($bb-border-radius, "name");
+
+	@while $i <= $bb-border-radius-scale {
+		
+		.#{$className}#{$bb-global-delimiter}#{$i} {
+			border-radius: $i+px;
+		}
+
+		@each $side, $value in map-deep-get($bb-border-radius, "modifiers") {
+			.#{$className}#{$bb-global-delimiter}#{$value}#{$bb-global-delimiter}#{$i} {
+				$v: $i + px;
+				@if $side == "top" {
+					border-top-left-radius: $v;
+					border-top-right-radius: $v;
+				}
+				@else if $side == "top-left" {
+					border-top-left-radius: $v;
+				}
+				@else if $side == "top-right" {
+					border-top-right-radius: $v;
+				}
+				@else if $side == "bottom" {
+					border-bottom-left-radius: $v;
+					border-bottom-right-radius: $v;
+				}
+				@else if $side == "bottom-right" {
+					border-bottom-right-radius: $v;
+				}
+				@else if $side == "bottom-left" {
+					border-bottom-left-radius: $v;
+				}			
+			}
+		}
+
+		$i: $i + 1;	
+	}
+
+	.no#{$bb-global-delimiter}#{$className} {
+		border-radius: 0 !important;
+	}
+
+	@each $side, $value in map-deep-get($bb-border-radius, "modifiers") {
+		.no#{$bb-global-delimiter}#{$className}#{$bb-global-delimiter}#{$side} {
+			@if $side == "top" {
+				border-top-left-radius: 0 !important;
+				border-top-right-radius: 0 !important;
+			}
+			@else if $side == "top-left" {
+				border-top-left-radius: 0 !important;
+			}
+			@else if $side == "top-right" {
+				border-top-right-radius: 0 !important;
+			}
+			@else if $side == "bottom" {
+				border-bottom-left-radius: 0 !important;
+				border-bottom-right-radius: 0 !important;
+			}
+			@else if $side == "bottom-right" {
+				border-bottom-right-radius: 0 !important;
+			}
+			@else if $side == "bottom-left" {
+				border-bottom-left-radius: 0 !important;
+			}			
+		}
+	}
+}

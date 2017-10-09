@@ -1,0 +1,61 @@
+$bb-text-color-settings-default: (
+	"import": true,
+	"name": "text"
+);
+
+$bb-text-color-settings: () !default;
+
+$bb-text-color-settings: map-merge($bb-text-color-settings-default, $bb-text-color-settings);
+
+@if (map-get($bb-text-color-settings, "import") == true) {
+
+	$className: map-get($bb-text-color-settings, "name");
+
+	// Generate a text-color class for every colour in the $colours map.
+	@each $category, $value in $bb-colors {
+	
+		$type: type-of($value);
+	
+		@if $type == "map" {
+			@each $color, $value in map-deep-get($bb-colors, $category) {
+				@if type-of($value) == "map" {
+					@each $c, $v in map-deep-get($bb-colors, $category, $color) {
+						.#{$className}#{$bb-global-delimiter}#{$category}#{$bb-global-delimiter}#{$color}#{$bb-global-delimiter}#{$c} {
+							color: $v;
+						}
+						// Generate hover class.
+						.#{$className}#{$bb-global-delimiter}#{$category}#{$bb-global-delimiter}#{$color}#{$bb-global-delimiter}#{$c}#{$bb-global-delimiter}#{$bb-hover-class-name} {
+							&:hover {
+								color: $v;
+							}
+						}
+					}
+				}
+
+				@else {
+					.#{$className}#{$bb-global-delimiter}#{$category}#{$bb-global-delimiter}#{$color} {
+						color: $value;
+					}
+					// Generate hover class.
+					.#{$className}#{$bb-global-delimiter}#{$category}#{$bb-global-delimiter}#{$color}#{$bb-global-delimiter}#{$bb-hover-class-name} {
+						&:hover {
+							color: $value;
+						}
+					}
+				}
+			}
+		}
+	
+		@else {
+			.#{$className}-#{$category} {
+				color: $value;
+			}
+			// Generate hover class.
+			.#{$className}#{$bb-global-delimiter}#{$category}#{$bb-global-delimiter}#{$bb-hover-class-name} {
+				&:hover {
+					color: $value;
+				}
+			}
+		}
+	}
+}

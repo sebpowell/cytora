@@ -1,0 +1,24 @@
+$bb-cursor-default: (
+	"import": true,
+	"name": "cursor",
+	"modifiers": (
+		"not-allowed": "not-allowed",
+		"pointer": "pointer",
+		"default": "default"
+	)
+);
+
+$bb-cursor: () !default;
+
+$bb-cursor: map-merge($bb-cursor-default, $bb-cursor);
+
+@if (map-get($bb-cursor, "import") == true) {
+
+	$className: map-get($bb-cursor, "name");
+
+	@each $k, $v in map-deep-get($bb-cursor, "modifiers") {
+		.#{$className}#{$bb-global-delimiter}#{$v} {
+			cursor: unquote($k);
+		}
+	}
+}

@@ -1,0 +1,29 @@
+$bb-max-width-settings-default: (
+	"import": true,
+	"name": "max-width"
+);
+
+$bb-max-width-settings: () !default;
+
+$bb-max-width-settings: map-merge($bb-max-width-settings-default, $bb-max-width-settings);
+
+@if (map-get($bb-max-width-settings, "import") == true) {
+
+	$className: map-get($bb-max-width-settings, "name");
+	
+	$i: 1;
+	
+	@while $i <= $bb-max-width-scale {
+
+		.#{$className}#{$bb-global-delimiter}#{$i * 100} {
+			max-width: $i * 100px;
+		}
+
+		$i: $i + 1;
+	}
+
+	.no#{$bb-global-delimiter}#{$className} {
+		max-width: 100% !important;
+	}
+}
+

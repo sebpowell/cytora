@@ -1,0 +1,22 @@
+$bb-text-align-settings-default: (
+	"import": true,
+	"name": "text",
+	"modifiers": (
+		"left": "left",
+		"center": "center",
+		"right": "right"
+	)
+);
+
+$bb-text-align-settings: () !default;
+
+$bb-text-align-settings: map-merge($bb-text-align-settings-default, $bb-text-align-settings);
+
+@if (map-get($bb-text-align-settings, "import") == true) {
+	
+	$className: map-get($bb-text-align-settings, "name");
+
+	@each $key, $value in map-deep-get($bb-text-align-settings, "modifiers") {
+		@include helpers("#{$className}#{$bb-global-delimiter}#{$value}", "text-align: #{$key}");
+	}
+}
