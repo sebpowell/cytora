@@ -5,6 +5,7 @@ $bb-breakpoints: ("m": 780px, "l": 1200px) !default;
 $bb-colors: (
 
 	"brand": #00A294,
+	"keyline": #e8f3f2
 
 ) !default;
 
@@ -15,7 +16,7 @@ $bb-letter-spacing: () !default;
 $bb-line-heights: () !default;
 
 $bb-grid: (
-	"gutter": 20px,
+	"gutter": 40px,
 	"breakpoint": 780px,
 ) !default;
 
@@ -33,11 +34,13 @@ $bb-normalize: true !default;
 
 $bb-shadows: () !default;
 
-$bb-spacing-scale: 10 !default;
+$bb-spacing-scale: 15 !default;
 
 $bb-spacing-base: 5px !default;
 
 $bb-text-sizes: (
+	13: 13px,
+	16: 16px,
 	18: 18px,
 	20: 20px,
 	24: 24px,
