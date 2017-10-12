@@ -1,10 +1,13 @@
 @import "_base";
 $gutter: 0 15px;
 
+$font-heading: "Roboto";
+$font-body: "Open Sans";
+
 
 body {
 	// padding: 100px;
-	font-family: "Roboto";
+	font-family: $font-body;
 }
 
 .section {
@@ -12,6 +15,11 @@ body {
 	@include if-above('l') {
 		padding: 100px 0;
 	}
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: 300;
+	font-family: $font-heading;
 }
 
 .dropdown {
@@ -25,6 +33,17 @@ body {
 	width: 400px;
 	position: absolute;
 	top: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-50px);
+	transition: all .25s;
+	z-index: 5;
+
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
 
 	&:after {
 		@include arrow("up", white, 5px);
@@ -38,36 +57,45 @@ body {
 		padding: sizes(5);
 		display: table;
 		width: 100%;
+		&:not(:last-of-type) {
+			border-bottom: 1px solid colors("keyline");
+		}
 		&:hover {
-			background-color: #e5e5e5;
+			background-color: colors("greyscale", 100);
 		}
 	}
 }
 
 .navigation {
-	position: absolute;
-	width: 100%;
-	height: 100px;
 
-	.navigation-logo {
-		
-		padding-top: 0 !important;
-		img {
-			width: 120px;
+	display: none;
+
+	@include if-above("l") {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100px;
+
+		.navigation-logo {
+			
+			padding-top: 0 !important;
+			img {
+				width: 120px;
+			}
 		}
-	}
 
-	.navigation-link {
-		display: table-cell;
-		vertical-align: middle;
-		color: white;
-		padding-right: sizes(8);
-		font-weight: 100;
-		font-size: 18px;
-		padding-top: 17px;
+		.navigation-link {
+			display: table-cell;
+			vertical-align: middle;
+			color: white;
+			padding-right: sizes(8);
+			font-weight: 100;
+			font-size: 18px;
+			padding-top: 17px;
 
-		a {
-			opacity: 0.8;
+			a {
+				opacity: 0.8;
+			}
 		}
 	}
 }
@@ -83,30 +111,42 @@ body {
 	@include background-image();
 	display: table;
 	width: 100%;
-	padding: 0 $gutter;
+	padding: $gutter;
 	color: white;
-	height: 650px;
+	height: 450px;
 	background-image: url('/images/background/bg.jpg');
+
+	@include if-above("l") {
+		height: 650px;
+	}
 
 	.masthead-title {
 		@include uppercase(0.01em);
-		font-size: 37px;
+		font-size: 28px;
 		line-height: 1.2;
 		font-weight: black;
 		max-width: 500px;
 		margin: 0 auto sizes(2);
 		@include if-above("l") {
-			font-size: 48px;
+			font-size: 42px;
 		}
 	}
 
 	.masthead-sub {
-		max-width: 400px;
+		max-width: 300px;
 		margin: 0 auto sizes(4);
-		font-size: 18px;
+		font-size: 15px;
 		opacity: 0.75;
 		font-weight: 100;
+		@include if-above("l") {
+			font-size: 18px;
+			max-width: 400px;
+		}
 	}
+}
+
+.width-100 {
+	width: 100% !important;
 }
 
 
@@ -129,30 +169,42 @@ body {
 
 .solution-tabs-body {
 	background-color: white;
-	box-shadow: 0px 15px 26px rgba(00,00,00,0.2);
-	padding: sizes(8);
+	box-shadow: 0px 15px 26px rgba(00,00,00,0.05);
 	border-radius: 3px;
 	position: relative;
 	z-index: 3;
 	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
 	@include if-above('l') {
+		display: none;
+		padding: 0;
 		margin-bottom: -200px;
 		border-radius: 0 0 3px 3px;
 	}
 
-	@include if-above('l') {
-		padding: sizes(15);
-	}
 
 	.solution-tabs-illustration {
-		width: 100%;
-		max-width: 500px;
+		width: 200px;
+		margin: 0 auto;
+		display: block;
+		transition: all .5s;
+
+		@include if-above('l') {
+			
+			height: 300px;
+			width: auto;
+			max-width: 500px;
+		}
 	}
 
-	display: none;
+	
 
 	&.is-open {
-		display: block;
+		display: flex;
+		@include if-above('l') {
+			display: block;
+		}
 	}
 }
 
@@ -168,21 +220,51 @@ body {
 	font-size: 18px;
 	margin-bottom: sizes(3) !important;
 	@include if-above(l) {
-		font-size: 24px;
+		font-size: 20px;
 	}
 }
 
 .solution-tabs-panel-left {
+	order: 2;
+	padding: sizes(6);
 	@include if-above(l) {
-		width: 40%;
+		width: 45%;
 		display: table-cell;
+		padding: sizes(15);
+		padding-right: 0;
+	}
+
+	.solution-tabs-illustration {
+
+		@include if-above(l) {
+			display: none;
+		}
+
+		@include if-below(l) {
+			margin-bottom: sizes(6);
+			height: 200px;
+			width: auto;
+		}
+
 	}
 }
 
 .solution-tabs-panel-right {
+	order: 1;
+	padding: sizes(6);
+	display: none;
+
+	@include if-below(l) {
+		background: colors("greyscale", 100);
+		border-bottom: 1px solid colors(greyscale, 300);
+	}
+
+
 	@include if-above(l) {
 		width: 60%;
+		padding: 0;
 		display: table-cell;
+		text-align: center;
 	}
 }
 
@@ -205,6 +287,7 @@ body {
 		float: left;
 		cursor: pointer;
 		width: 100%;
+		text-align: center;
 
 		@include if-above(l) {
 			width: 25%;
@@ -212,13 +295,22 @@ body {
 		}
 
 		.inner {
-			background: darken(colors(brand), 5%);
+			// background: darken(colors(brand), 5%);
 			padding: sizes(6);
 			display: block;
 			border-radius: 3px 3px 0 0;
 			cursor: pointer;
+			transition: all .25s;
 
-			
+			.colour {
+				display: none;
+			}
+
+			img {
+				opacity: 0.8;
+				transition: all .25s;
+				height: 50px;
+			}
 
 			@include if-below(l) {
 				display: none;
@@ -226,12 +318,27 @@ body {
 
 			&:hover {
 				background-color: darken(colors(brand), 5%);
+				img {
+					opacity: 1;
+				}
 			}
 
 			&.is-active {
 				background-color: white;
 				border-radius: 3px 3px 0 0;
-				box-shadow: 0px 2px 26px rgba(00,00,00,0.2);
+				box-shadow: 0px 2px 26px rgba(00,00,00,0.05);
+
+				img {
+					opacity: 1;
+				}
+
+				.colour {
+					display: inline-block;
+				}
+
+				.white {
+					display: none;
+				}
 
 				@include if-below(l) {
 					display: block;
@@ -242,18 +349,21 @@ body {
 }
 
 .section-tabs {
-	margin-bottom: 100px;
+	include if-below(l) {
+		margin-bottom: 100px;
+	}
 }
 
 
 .button {
 	@include uppercase(0.05em);
 	border-radius: 100px;
-	padding: 0 sizes(8);
+	padding: 0 sizes(6);
 	cursor: pointer;
-	height: 45px;
-	font-size: 14px;
-	line-height: 47px;
+	height: 40px;
+	font-size: 12px;
+	font-family: $font-heading;
+	line-height: 42px;
 	display: inline-block;
 	&.button-brand {
 		background-color: colors("brand");
@@ -263,7 +373,7 @@ body {
 
 p {
 	font-weight: 300;
-	line-height: 1.8;
+	line-height: 1.5;
 	&:not(:last-child) {
 		margin-bottom: sizes(5);
 	}
@@ -328,19 +438,31 @@ p {
 	border-radius: 3px;
 }
 
+.section-solutions {
+	@include if-above("l") {
+		padding-top: 200px;
+	}
+}
+
 .solutions-tabs-feature-list {
 	@include no-bullet;
 	> li {
 		padding-left: 30px;
 		position: relative;
 		font-size: 16px;
-		font-weight: 100;
+		// font-weight: 100;
 		line-height: 1.5;
 		padding-left: 45px;
+		color: colors("brand");
+		font-weight: 900;
 
 		@include if-above(l) {
-			font-size: 18px;
+			font-size: 16px;
 			padding-left: 50px;
+		}
+
+		p {
+			font-weight: 300;
 		}
 
 		&:not(:last-child) {
@@ -353,13 +475,22 @@ p {
 			top: -4px;
 			width: 35px;
 			@include if-above(l) {
-				width: 35px;
+				width: 40px;
 			}
 		}
 	}
 
 	@include if-below(l) {
 		margin-bottom: sizes(5);
+	}
+}
+
+
+.solutions-tabes-panel-logo {
+	height: 50px;
+	margin-bottom: sizes(8);
+	@include if-above(l) {
+		display: none;
 	}
 }
 
@@ -377,6 +508,7 @@ p {
 		display: table-cell;
 		padding-top: sizes(3);
 		color: colors("brand");
+		font-family: $font-heading;
 		@include uppercase(0.01em);
 		font-weight: 500;
 		font-size: 10px;

@@ -4,6 +4,33 @@ block variables
 
 body
 
+	script.
+		$(document).ready(function() {
+
+			$(".dropdown-menu").on("click", function(e) {
+				e.stopPropagation();
+			});
+
+			$(".dropdown").on("click", function() {
+				$(this).find(".dropdown-menu").toggleClass("is-open");
+			});
+
+			$(".solution-tabs-navigation a").on("click", function(e) {
+				
+				e.preventDefault();
+
+				$(".solution-tabs-navigation a").removeClass("is-active");
+
+				$(this).addClass("is-active");
+
+				var selected = $(this).attr("href");
+
+				$(".solution-tabs-body").removeClass("is-open");
+
+				$("#"+selected).addClass("is-open");
+			});
+		});
+
 	.navigation
 		.site-container
 			.display-table.height-100
@@ -12,24 +39,24 @@ body
 				.navigation-link.dropdown
 					a Solutions
 					.dropdown-menu
-						a(href="")
+						a(href="/grow-premium.html")
 							.display-table-cell.vertical-align-top
-								img(src="images/icons/solution.png" width="80")
-							.display-table-cell.vertical-align-middle.padding-left-3
-								.text-20.text-brand.weight-bold.margin-bottom-1 Grow premium
-								.text-muted.text-16 Select the best risks, set the right price.
-						a(href="")
+								img(src="images/icons/grow-premium.png" width="50")
+							.display-table-cell.vertical-align-middle.padding-left-1
+								.text-15.text-brand.weight-bold.margin-bottom-1 Grow premium
+								.text-muted.text-13 Select the best risks, set the right price.
+						a(href="/expense-ratio.html")
 							.display-table-cell.vertical-align-top
-								img(src="images/icons/solution.png" width="80")
-							.display-table-cell.vertical-align-middle.padding-left-3
-								.text-20.text-brand.weight-bold.margin-bottom-1 Grow premium
-								.text-muted.text-16 Select the best risks, set the right price.
-						a(href="")
+								img(src="images/icons/expense-ratio.png" width="50")
+							.display-table-cell.vertical-align-middle.padding-left-1
+								.text-15.text-brand.weight-bold.margin-bottom-1 Expense ratio
+								.text-muted.text-13 Select the best risks, set the right price.
+						a(href="/improve-loss-ratio.html")
 							.display-table-cell.vertical-align-top
-								img(src="images/icons/solution.png" width="80")
-							.display-table-cell.vertical-align-middle.padding-left-3
-								.text-20.text-brand.weight-bold.margin-bottom-1 Grow premium
-								.text-muted.text-16 Select the best risks, set the right price.
+								img(src="images/icons/solution.png" width="50")
+							.display-table-cell.vertical-align-middle.padding-left-1
+								.text-15.text-brand.weight-bold.margin-bottom-1 Improve loss ratio
+								.text-muted.text-13 Select the best risks, set the right price.
 				.navigation-link
 					a Technology
 				.navigation-link

@@ -11,13 +11,13 @@ block body
 				
 				e.preventDefault();
 
-				$(".solution-tabs-navigation a").removeClass("is-active");
+			$(".solution-tabs-navigation a").removeClass("is-active");
 
 				$(this).addClass("is-active");
 
 				var selected = $(this).attr("href");
 
-				$(".solution-tabs-panel").removeClass("is-open");
+				$(".solution-tabs-body").removeClass("is-open");
 
 				$("#"+selected).addClass("is-open");
 			});
@@ -45,68 +45,110 @@ block body
 				ul.solution-tabs-navigation
 					li
 						a.inner.is-active(href="1")
-							.product-icon
-								+icon(68, "test", "product-icon-glyph")
-								.product-icon-text Predictive Lead Generation
+							img.white(src="images/products/white/broker-benchmarking.svg")
+							img.colour(src="images/products/colour/broker-benchmarking.svg")
 					li
 						a.inner(href="2")
-							.product-icon
-								+icon(68, "test", "product-icon-glyph")
-								.product-icon-text Predictive Lead Generation
+							img.white(src="images/products/white/marketing-micro-segmentation.svg")
+							img.colour(src="images/products/colour/marketing-micro-segmentation.svg")
 
 					li
 						a.inner(href="3")
-							.product-icon
-								+icon(68, "test", "product-icon-glyph")
-								.product-icon-text Predictive Lead Generation
+							img.white(src="images/products/white/predictive-lead-generation.svg")
+							img.colour(src="images/products/colour/predictive-lead-generation.svg")
 
 					li
 						a.inner(href="4")
-							.product-icon
-								+icon(68, "test", "product-icon-glyph")
-								.product-icon-text Predictive Lead Generation
+							img.white(src="images/products/white/pricing-automation.svg")
+							img.colour(src="images/products/colour/pricing-automation.svg")
 
 
-				.solution-tabs-body.is-open(id="1")
+				.solution-tabs-body.is-open(id="1")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/broker-benchmarking.svg")
+
+						img.solution-tabs-illustration(src="images/illustrations/1.png")
+
+						ul.solution-tabs-indicator
+							li.is-active Strategy 
+							li Distribution
+							li Price
+						p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+
+
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
 					
-					.display-table-above-medium
-						.solution-tabs-panel-left
-							img.margin-bottom-4(src="images/products/icons/broker-benchmarking.svg" width="200")
-							p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
-							//- +icon(68, "test")
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/1.png")
 
-							ul.solutions-tabs-feature-list
-								li
-									img(src="images/icons/tick.png")
-									p Identify profitable micro-segments to target compared to market prices.
-								li
-									img(src="images/icons/tick.png")
-									p Identify profitable micro-segments to target compared to market prices.
-						
-						.solution-tabs-panel-right.display-table-cell.text-center.vertical-align-middle.text-right
-							img.solution-tabs-illustration(src="images/illustrations/1.png")
-
-				.solution-tabs-body.is-open(id="1")
+				.solution-tabs-body(id="2")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/broker-benchmarking.svg")
+						img.solution-tabs-illustration(src="images/illustrations/2.png")
+						ul.solution-tabs-indicator
+							li.is-active Strategy 
+							li Distribution
+							li Price
+						p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
 					
-					.display-table-above-medium
-						.solution-tabs-panel-left
-							img.margin-bottom-4(src="images/products/icons/broker-benchmarking.svg" width="200")
-							p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
-							//- +icon(68, "test")
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/2.png")
 
-							ul.solutions-tabs-feature-list
-								li
-									img(src="images/icons/tick.png")
-									p Identify profitable micro-segments to target compared to market prices.
-								li
-									img(src="images/icons/tick.png")
-									p Identify profitable micro-segments to target compared to market prices.
-						
-						.solution-tabs-panel-right.display-table-cell.text-center.vertical-align-middle.text-right
-							img.solution-tabs-illustration(src="images/illustrations/1.png")
+				.solution-tabs-body(id="3")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/broker-benchmarking.svg")
+						img.solution-tabs-illustration(src="images/illustrations/3.png")
+						ul.solution-tabs-indicator
+							li.is-active Strategy 
+							li Distribution
+							li Price
+						p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/3.png")
+
+				.solution-tabs-body(id="4")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/broker-benchmarking.svg")
+						img.solution-tabs-illustration(src="images/illustrations/4.png")
+						ul.solution-tabs-indicator
+							li.is-active Strategy 
+							li Distribution
+							li Price
+						p.solution-tabs-headline Reveal under exploited micro-segments within your existing book and profitable micro-segments outside of your exposure.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
+							li
+								img(src="images/icons/tick.png")
+								p Identify profitable micro-segments to target compared to market prices.
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/4.png")
 
 				
-	.section
+	.section.background-greyscale-100
 		.site-container
 			h2.section-title Solutions
 
@@ -114,8 +156,8 @@ block body
 				.columns-4
 					.panel.padding-12.text-center
 						img.margin-bottom-4(src="images/icons/solution.png" width="80")
-						h2.text-16.margin-bottom-2.text-brand Improve loss rations
-						p.text-18.text-muted Identify profit resivours in your exisiting book, issue accurate technical prices.
+						h2.margin-bottom-2.text-brand Improve loss ratios
+						p.text-16.text-muted Identify profit resivours in your exisiting book, issue accurate technical prices.
 						a(href="#" class="button button-brand") Learn more
 
 				.columns-4
@@ -162,10 +204,10 @@ block body
 		.site-container
 			.columns.no-gutter
 				.columns-6
-					.more-info-contant.border-right
+					.more-info-contant.border-right-above-large.border-bottom-below-l
 						.display-table-cell.vertical-align-middle
 							img.margin-bottom-3(src="images/icons/solution.png" width="80")
-							h2.text-brand.weight-100.margin-bottom-3 Grow premium
+							h2.text-brand.margin-bottom-3 Grow premium
 							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
 							a(href="#" class="button button-brand") Learn more
 
@@ -173,7 +215,7 @@ block body
 					.more-info-contant
 						.display-table-cell.vertical-align-middle
 							img.margin-bottom-3(src="images/icons/solution.png" width="80")
-							h2.text-brand.weight-100.margin-bottom-3 Grow premium
+							h2.text-brand.margin-bottom-3 Grow premium
 							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
 							a(href="#" class="button button-brand") Learn more
 

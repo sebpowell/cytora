@@ -1,0 +1,113 @@
+extends  _inc/_layout.jade
+
+block body
+	.masthead
+		.display-table-cell.vertical-align-middle.height-100.width-100.text-center
+			h1.masthead-title Select the best risks, set the right price
+			p.masthead-sub Predictive scores and accurate technical pricing for every potential insured
+			a(href="#" class="button button-brand") Talk to an expert
+
+	.section
+		.container
+			.margin-bottom-8
+				.max-width-700.margin-auto
+					p.text-24.text-32-above-medium.text-brand.weight-bold Identifying profitable opportunities and win the best performing risks. 
+					p.text-16.text-18-above-medium Timely access to accurate, granular information at the point of underwriting and renewal is critical to improving your loss ratio and avoiding adverse selection. Underwriters who can beat their competitors in identifying profitable and unprofitable opportunities will compete on, and win, the best performing risks. 
+					p.text-16.text-18-above-medium The Cytora Risk Engine provides continuous predictive scoring and accurate technical pricing for every potential insured, based on a market-wide view of risk. Cytora’s predictive analytics uncover hidden losses and reveal additional predictive rating factors to improve risk selection, pricing and performance.
+
+			.margin-bottom-8
+				.max-width-900.margin-auto
+					img(src="images/top/1.png")
+
+			.text-center
+				a(href="#" class="button button-brand") Read the case study
+
+	.section.background-brand.section-tabs
+		.container.max-width-1200
+			h2.section-title.text-white Improve loss ratio toolkit
+			.solution-tabs
+				ul.solution-tabs-navigation
+					li
+						a.inner.is-active(href="submission-scoring")
+							img.white(src="images/products/white/submission-scoring.svg")
+							img.colour(src="images/products/colour/submission-scoring.svg")
+					li
+						a.inner(href="pricing-automation")
+							img.white(src="images/products/white/pricing-automation.svg")
+							img.colour(src="images/products/colour/pricing-automation.svg")
+
+					li
+						a.inner(href="underwriting-micro-segmentation")
+							img.white(src="images/products/white/underwriting-micro-segmentation.svg")
+							img.colour(src="images/products/colour/underwriting-micro-segmentation.svg")
+
+
+				.solution-tabs-body.is-open(id="submission-scoring")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/submission-scoring.svg")
+
+						img.solution-tabs-illustration(src="images/illustrations/submission-scoring.png")
+
+						ul.solution-tabs-indicator
+							li Strategy 
+							li Distribution
+							li.is-active Underwriting
+						p.solution-tabs-headline Identify the risk score for every submission, ranked against other similar risks, including those outside of your book.
+
+
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Instantly differentiate between profitable and unprofitable risks relative to other risks in the same trade sector and strike at the most attractive opportunities.
+							li
+								img(src="images/icons/tick.png")
+								p Accurately assess thin-file submissions where traditional models and data sources fail.
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/submission-scoring.png")
+
+				.solution-tabs-body(id="pricing-automation")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/pricing-automation.svg")
+						img.solution-tabs-illustration(src="images/illustrations/pricing-automation.png")
+						ul.solution-tabs-indicator
+							li Strategy 
+							li Distribution
+							li.is-active Underwriting
+						p.solution-tabs-headline Accurate technical pricing for every submission based on market-wide exposure and loss data.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Set precise premiums that cover future losses
+							li
+								img(src="images/icons/tick.png")
+								p Accurately price thin-file submissions that are typically overlooked or priced generically
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/pricing-automation.png")
+
+				.solution-tabs-body(id="underwriting-micro-segmentation")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/underwriting-micro-segmentation.svg")
+						img.solution-tabs-illustration(src="images/illustrations/underwriting-micro-segmentation.png")
+						ul.solution-tabs-indicator
+							li.is-active Strategy 
+							li Distribution
+							li Price
+						p.solution-tabs-headline Reveal profit reservoirs within your existing book and attractive new micro-segments outside of your exposure based on changing burn rates and volatility.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Set rates accurately for difficult to write micro-segments
+							li
+								img(src="images/icons/tick.png")
+								p Target profitable niches with granular selection decisions which penetrate beneath high-level segments
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/underwriting-micro-segmentation.png")
+				
+	+solutions()
+
+	+approach()
+
+	+more()

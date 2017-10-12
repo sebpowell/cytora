@@ -1,3 +1,86 @@
+mixin solutions()
+	.section.background-greyscale-100.section-solutions
+		.site-container
+			h2.section-title Solutions
+
+			.columns.display-flex-above-m.flex-column
+				.columns-4.display-flex-above-m
+					.panel.padding-10.text-center
+						img.margin-bottom-4(src="images/icons/expense-ratio.png" width="80")
+						h2.margin-bottom-2.text-brand Improve loss ratios
+						//- div(style="height: 100px")
+						p.text-14.text-muted Identify profit resivours in your exisiting book, issue accurate technical prices.
+						a(href="#" class="button button-brand") Learn more
+
+				.columns-4.display-flex-above-m
+					.panel.padding-10.text-center
+						img.margin-bottom-4(src="images/icons/grow-premium.png" width="80")
+						h2.margin-bottom-2.text-brand Grow premium
+						//- div(style="height: 100px")
+						p.text-14.text-muted Target the most attractive risks in segment you’re already writing.
+						a(href="#" class="button button-brand") Learn more
+
+				.columns-4.display-flex-above-m
+					.panel.padding-10.text-center
+						img.margin-bottom-4(src="images/icons/expense-ratio.png" width="80")
+						h2.margin-bottom-2.text-brand Reduce expense ratios
+						//- div(style="height: 100px")
+						p.text-14.text-muted Automate processes and optimise the ratio of risks submitted to risks bound. 
+						a(href="#" class="button button-brand") Learn more
+
+
+mixin more()
+	.section.no-padding.is-hidden
+		.site-container
+			.columns.no-gutter
+				.columns-6
+					.more-info-contant.border-right-above-large.border-bottom-below-l
+						.display-table-cell.vertical-align-middle
+							img.margin-bottom-3(src="images/icons/solution.png" width="80")
+							h2.text-brand.margin-bottom-3 Grow premium
+							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
+							a(href="#" class="button button-brand") Learn more
+
+				.columns-6
+					.more-info-contant
+						.display-table-cell.vertical-align-middle
+							img.margin-bottom-3(src="images/icons/solution.png" width="80")
+							h2.text-brand.margin-bottom-3 Grow premium
+							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
+							a(href="#" class="button button-brand") Learn more
+
+
+mixin approach()
+	.section
+		.site-container
+			h2.section-title Cytora’s unique approach to risk selection and pricing
+
+			.columns.display-flex-above-m.flex-column
+				.columns-4.display-flex-above-m
+					.panel.padding-12.text-center.width-100
+						img.margin-bottom-4(src="images/icons/scale.png" width="40")
+						h2.margin-bottom-2.text-brand Population Scale
+						p.text-14.text-muted Every insurable risk is </br> known and ranked.
+
+				.columns-4.display-flex-above-m
+					.panel.padding-12.text-center.width-100
+						img.margin-bottom-4(src="images/icons/time.png" width="40")
+						h2.margin-bottom-2.text-brand Real-time
+						p.text-14.text-muted Data is updated continuously.
+
+				.columns-4.display-flex-above-m
+					.panel.padding-12.text-center.width-100
+						img.margin-bottom-4(src="images/icons/scale.png" width="40")
+						h2.margin-bottom-2.text-brand Algorithmic
+						p.text-14.text-muted  5 years for a human to read the data processed daily,
+
 mixin icon(size, name, color)
 	svg(style="width: #{size}; height: #{size}" class="#{color}")
 		use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="##{name}")
+
+
+mixin indicator()
+	ul.solution-tabs-indicator
+		li.is-active Solutions
+		li Test
+		li Moo

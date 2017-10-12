@@ -1,0 +1,133 @@
+extends  _inc/_layout.jade
+
+block body
+	.masthead
+		.display-table-cell.vertical-align-middle.height-100.width-100.text-center
+			h1.masthead-title Reduce your cost to quote and bind
+			p.masthead-sub Improve operating performance and drive underwriting profitability.
+			a(href="#" class="button button-brand") Talk to an expert
+
+	.section
+		.container
+			.margin-bottom-8
+				.max-width-700.margin-auto
+					p.text-24.text-32-above-medium.text-brand.weight-bold Automated decisions for small to mid market lines and timely assessment for complex quotes.
+					p.text-16.text-18-above-medium Underwriters often receive incomplete submissions, making it difficult for them to make accurate and efficient pricing decisions. Manual evaluation is both costly and time consuming, and in a soft market, the time taken to quote matters more than ever. 
+					p.text-16.text-18-above-medium The Cytora Risk Engine pre-computes granular risk scores and accurate technical prices for every potential insured prior to any interaction with an underwriter, enabling automated decisions for small to mid market lines, and timely assessment for complex risks.
+
+			.text-center
+				a(href="#" class="button button-brand") Read the case study
+
+	.section.background-brand.section-tabs
+		.container.max-width-1200
+			h2.section-title.text-white Expense ratio reduction toolkit
+			.solution-tabs
+				ul.solution-tabs-navigation
+					li
+						a.inner.is-active(href="predictive-lead-generation")
+							img.white(src="images/products/white/predictive-lead-generation.svg")
+							img.colour(src="images/products/colour/predictive-lead-generation.svg")
+					li
+						a.inner(href="pricing-automation")
+							img.white(src="images/products/white/pricing-automation.svg")
+							img.colour(src="images/products/colour/pricing-automation.svg")
+
+					li
+						a.inner(href="submission-scoring")
+							img.white(src="images/products/white/submission-scoring.svg")
+							img.colour(src="images/products/colour/submission-scoring.svg")
+
+					li
+						a.inner(href="broker-benchmarking")
+							img.white(src="images/products/white/broker-benchmarking.svg")
+							img.colour(src="images/products/colour/broker-benchmarking.svg")
+
+
+				.solution-tabs-body.is-open(id="predictive-lead-generation")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/predictive-lead-generation.svg")
+
+						img.solution-tabs-illustration(src="images/illustrations/predictive-lead-generation.png")
+
+						ul.solution-tabs-indicator
+							li Strategy 
+							li.is-active Distribution
+							li Underwriting
+						p.solution-tabs-headline Discover and target the most attractive opportunities within a trade sector or micro-segment that deliver a target loss ratio over time.
+
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Reduce your cost to acquire high-quality leads.
+							li
+								img(src="images/icons/tick.png")
+								p Focus underwriting resources on leads that closely match your appetite.
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/predictive-lead-generation.png")
+
+				.solution-tabs-body(id="pricing-automation")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/pricing-automation.svg")
+						img.solution-tabs-illustration(src="images/illustrations/pricing-automation.png")
+						ul.solution-tabs-indicator
+							li Strategy 
+							li Distribution
+							li.is-active Underwriting
+						p.solution-tabs-headline Accurate technical pricing for every submission based on market-wide exposure and loss data.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Reduce the time taken to quote and bind.
+							li
+								img(src="images/icons/tick.png")
+								p Automate the underwriting process for small to mid-market lines.
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/pricing-automation.png")
+
+				.solution-tabs-body(id="submission-scoring")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/submission-scoring.svg")
+						img.solution-tabs-illustration(src="images/illustrations/submission-scoring.png")
+						ul.solution-tabs-indicator
+							li Strategy 
+							li Distribution
+							li.is-active Underwriting
+						p.solution-tabs-headline Granular risk scores for every submission prior to any interaction with an underwriter.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Instantly differentiate between profitable and unprofitable risks relative to other risks in the same trade sector and strike at the most attractive opportunities.
+							li
+								img(src="images/icons/tick.png")
+								p Focus underwriting resources on the risks you want to win.
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/submission-scoring.png")
+
+				.solution-tabs-body(id="broker-benchmarking")					
+					.solution-tabs-panel-left
+						img.solutions-tabes-panel-logo(src="images/products/colour/broker-benchmarking.svg")
+						img.solution-tabs-illustration(src="images/illustrations/broker-benchmarking.png")
+						ul.solution-tabs-indicator
+							li Strategy 
+							li.is-active Distribution
+							li Underwriting
+						p.solution-tabs-headline Continuously benchmark broker led business against the entire market based on risk quality and ensure you see the best risks from your network.
+						ul.solutions-tabs-feature-list
+							li
+								img(src="images/icons/tick.png")
+								p Prioritise and reward brokers who show you the best risks within target segments.
+							li
+								img(src="images/icons/tick.png")
+								p Spend less time filtering out low-quality risks.
+					
+					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
+						img.solution-tabs-illustration(src="images/illustrations/broker-benchmarking.png")
+				
+	+solutions()
+
+	+approach()
+
+	+more()

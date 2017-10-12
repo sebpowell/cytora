@@ -1,5 +1,5 @@
-(function($) { 
-	$.fn.tabs = function(options, val) {
+// (function($) { 
+// 	$.fn.tabs = function(options, val) {
 
-	});
-})(jQuery);
+// 	});
+// })(jQuery);
