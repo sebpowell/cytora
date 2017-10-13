@@ -1,42 +1,70 @@
+mixin contact()
+	.section.background-brand(id="contact")
+		.site-container
+			h2.section-title.text-white.margin-bottom-8 Contact us to speak to an expert
+
+			.columns
+				.columns-7
+					.form-group
+						.columns.gutter-2
+							.columns-6
+								input(type="text" placeholder="Your name")
+							.columns-6
+								input(type="text" placeholder="Company")
+					.form-group
+						input(type="email" placeholder="Email address")
+
+					.form-group
+						input(type="tel" placeholder="Phone number")
+
+					.button.button-brand-dark.width-100.button-50.margin-bottom-3 Request callback
+
+					.text-center.text-white
+						p Or give us a call on 0207 890 890
+				.columns-5
+					.contact-quote
+						p "Mixpanel enables DocuSign to be successful because it enables our customers to be successful. What started as a need for simple marketing metrics turned into custom product metrics for over 100 different stakeholders across the company."                        
+
+
 mixin solutions()
 	.section.background-greyscale-100.section-solutions
 		.site-container
-			h2.section-title Solutions
+			h2.section-title.margin-bottom-6 Solutions
 
-			.columns.display-flex-above-m.flex-column
-				.columns-4.display-flex-above-m
-					.panel.padding-10.text-center
-						img.margin-bottom-4(src="images/icons/expense-ratio.png" width="80")
-						h2.margin-bottom-2.text-brand Improve loss ratios
-						//- div(style="height: 100px")
-						p.text-14.text-muted Identify profit resivours in your exisiting book, issue accurate technical prices.
-						a(href="#" class="button button-brand") Learn more
+			.columns.display-flex-above-l.flex-column
+				.columns-4.display-flex-above-l
+					.panel.padding-10.text-center.max-width-400.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/expense-ratio.png" width="80")
+						h2.margin-bottom-2.text-brand.text-16 Improve loss ratios by up to 8%
+						div(style="height: 130px")
+							p.text-14.text-muted Continuously tune your portfolio in response to changing market dynamics.
+							a(href="#" class="button button-brand") Learn more
 
-				.columns-4.display-flex-above-m
-					.panel.padding-10.text-center
-						img.margin-bottom-4(src="images/icons/grow-premium.png" width="80")
-						h2.margin-bottom-2.text-brand Grow premium
-						//- div(style="height: 100px")
-						p.text-14.text-muted Target the most attractive risks in segment you’re already writing.
-						a(href="#" class="button button-brand") Learn more
+				.columns-4.display-flex-above-l
+					.panel.padding-10.text-center.max-width-400.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/grow-premium.png" width="80")
+						h2.margin-bottom-2.text-brand.text-16 Grow premium by up to 3%
+						div(style="height: 130px")
+							p.text-14.text-muted Identify profitable segments outside of your current appetite.
+							a(href="#" class="button button-brand") Learn more
 
-				.columns-4.display-flex-above-m
-					.panel.padding-10.text-center
-						img.margin-bottom-4(src="images/icons/expense-ratio.png" width="80")
-						h2.margin-bottom-2.text-brand Reduce expense ratios
-						//- div(style="height: 100px")
-						p.text-14.text-muted Automate processes and optimise the ratio of risks submitted to risks bound. 
-						a(href="#" class="button button-brand") Learn more
+				.columns-4.display-flex-above-l
+					.panel.padding-10.text-center.max-width-400.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/expense-ratio.png" width="80")
+						h2.margin-bottom-2.text-brand.text-16 Improve your expense ratio
+						div(style="height: 130px")
+							p.text-14.text-muted Automate processes and optimise the ratio of risks submitted to risks bound. 
+							a(href="#" class="button button-brand") Learn more
 
 
 mixin more()
-	.section.no-padding.is-hidden
+	.section.no-padding
 		.site-container
 			.columns.no-gutter
 				.columns-6
-					.more-info-contant.border-right-above-large.border-bottom-below-l
+					.more-info-contant.border-right-above-l.border-bottom-below-l
 						.display-table-cell.vertical-align-middle
-							img.margin-bottom-3(src="images/icons/solution.png" width="80")
+							img.margin-bottom-3(src="#{images}/icons/grow-premium.png" width="80")
 							h2.text-brand.margin-bottom-3 Grow premium
 							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
 							a(href="#" class="button button-brand") Learn more
@@ -44,34 +72,34 @@ mixin more()
 				.columns-6
 					.more-info-contant
 						.display-table-cell.vertical-align-middle
-							img.margin-bottom-3(src="images/icons/solution.png" width="80")
+							img.margin-bottom-3(src="#{images}/icons/grow-premium.png" width="80")
 							h2.text-brand.margin-bottom-3 Grow premium
 							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
 							a(href="#" class="button button-brand") Learn more
 
 
 mixin approach()
-	.section
+	.section.background-greyscale-100.section-approach
 		.site-container
-			h2.section-title Cytora’s unique approach to risk selection and pricing
+			h2.section-title.margin-bottom-6 Cytora’s unique approach to risk selection and pricing
 
-			.columns.display-flex-above-m.flex-column
-				.columns-4.display-flex-above-m
-					.panel.padding-12.text-center.width-100
-						img.margin-bottom-4(src="images/icons/scale.png" width="40")
-						h2.margin-bottom-2.text-brand Population Scale
+			.columns.display-flex-above-l.flex-column
+				.columns-4.display-flex-above-l
+					.panel.padding-12.text-center.width-100.max-width-400.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/scale.png" width="40")
+						h2.margin-bottom-2.text-brand.text-18 Population Scale
 						p.text-14.text-muted Every insurable risk is </br> known and ranked.
 
-				.columns-4.display-flex-above-m
-					.panel.padding-12.text-center.width-100
-						img.margin-bottom-4(src="images/icons/time.png" width="40")
-						h2.margin-bottom-2.text-brand Real-time
+				.columns-4.display-flex-above-l
+					.panel.padding-12.text-center.width-100.max-width-400.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/time.png" width="40")
+						h2.margin-bottom-2.text-brand.text-18 Real-time
 						p.text-14.text-muted Data is updated continuously.
 
-				.columns-4.display-flex-above-m
-					.panel.padding-12.text-center.width-100
-						img.margin-bottom-4(src="images/icons/scale.png" width="40")
-						h2.margin-bottom-2.text-brand Algorithmic
+				.columns-4.display-flex-above-l
+					.panel.padding-12.text-center.width-100.max-width-400.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/scale.png" width="40")
+						h2.margin-bottom-2.text-brand.text-18 Algorithmic
 						p.text-14.text-muted  5 years for a human to read the data processed daily,
 
 mixin icon(size, name, color)

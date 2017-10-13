@@ -1,6 +1,6 @@
 $bb-border-radius-scale: 5;
 
-$bb-breakpoints: ("m": 780px, "l": 1200px) !default;
+$bb-breakpoints: ("m": 780px, "l": 1000px) !default;
 
 $bb-colors: (
 
@@ -30,7 +30,7 @@ $bb-line-heights: () !default;
 
 $bb-grid: (
 	"gutter": 40px,
-	"breakpoint": 780px,
+	"breakpoint": 1000px,
 ) !default;
 
 $bb-global-delimiter: "-" !default;

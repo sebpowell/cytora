@@ -20,6 +20,9 @@ gulp.task("jade", function() {
 	gulp.src('views/**/!(_)*.jade')
 	.pipe(jade({
 		pretty: true,
+		locals: {
+			images: 'assets/images'
+		}
 	}))
 	.pipe(gulp.dest("./"));
 });
@@ -29,7 +32,7 @@ gulp.task("jade", function() {
 /////////////////////////////////////////////////////
 
 gulp.task('sass', function () {
-	gulp.src(['scss/styles.scss'])
+	gulp.src(['assets/scss/styles.scss'])
 		.pipe(sass({
 			outputStyle: "compact",
 		}).on('error', sass.logError))
@@ -44,9 +47,9 @@ gulp.task('sass', function () {
 /////////////////////////////////////////////////////
 
 gulp.task("uglify", function() {
-	gulp.src(["documentation/inc/javascript/vendor/*.js", "documentation/inc/javascript/components/*.js"])
+	gulp.src(["assets/js/vendor/*.js", "assets/js/components/*.js"])
 	.pipe(concat("application.js"))
-	.pipe(gulp.dest("documentation/inc/javascript/"));
+	.pipe(gulp.dest("assets/js"));
 });
 
 /////////////////////////////////////////////////////
@@ -54,8 +57,8 @@ gulp.task("uglify", function() {
 /////////////////////////////////////////////////////
 
 gulp.task("watch", function() {
-	gulp.watch(['scss/**/*.scss'], ['sass']);
-	gulp.watch(['documentation/inc/javascript/**/*.js'], ['uglify']);
+	gulp.watch(['assets/scss/**/*.scss'], ['sass']);
+	gulp.watch(['assets/js/**/*.js'], ['uglify']);
 	gulp.watch(['views/**/*.jade'], ['jade']);
 });
 
