@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/marketing-micro-segmentation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1121.000000, -183.000000)">
+            <g id="icons/marketing-micro-segmentation" transform="translate(1123.000000, 185.000000)">
+                <g id="marketing-micro-segmentation">
+                    <circle id="Oval" stroke="#FFFFFF" stroke-width="2" cx="30" cy="30" r="31"></circle>
+                    <g id="Group" transform="translate(15.000000, 15.000000)" fill-rule="nonzero" fill="#FFFFFF">
+                        <path d="M15,0 C14.64,0 14.3478261,0.292173913 14.3478261,0.652173913 L14.3478261,5.86956522 C14.3478261,6.22956522 14.64,6.52173913 15,6.52173913 C19.6747826,6.52173913 23.4782609,10.3252174 23.4782609,15 C23.4782609,19.6747826 19.6747826,23.4782609 15,23.4782609 C10.3252174,23.4782609 6.52173913,19.6747826 6.52173913,15 C6.52173913,14.64 6.22956522,14.3478261 5.86956522,14.3478261 L0.652173913,14.3478261 C0.292173913,14.3478261 0,14.64 0,15 C0,23.2708696 6.72913043,30 15,30 C23.2708696,30 30,23.2708696 30,15 C30,6.72913043 23.2708696,0 15,0 Z" id="Shape"></path>
+                        <path d="M15,19.4117647 C17.4327731,19.4117647 19.4117647,17.4327731 19.4117647,15 C19.4117647,12.5672269 17.4327731,10.5882353 15,10.5882353 C12.5672269,10.5882353 10.5882353,12.5672269 10.5882353,15 C10.5882353,17.4327731 12.5672269,19.4117647 15,19.4117647 Z" id="Shape" opacity="0.6"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

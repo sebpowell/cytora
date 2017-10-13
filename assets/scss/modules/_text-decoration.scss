@@ -1,8 +1,8 @@
 $bb-text-decoration-settings-default: (
 	"import": true,
 	"modifiers": (
-		"line-through": "text-line-through",
-		"underline": "text-underline"
+		"text-line-through": "strikethrough",
+		"text-underline": "underline"
 	)
 );
 

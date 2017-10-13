@@ -5613,17 +5613,17 @@ img { max-width: 100%; }
 
 .text-greyscale-900-hover:hover { color: #212121; }
 
-.line-through { text-decoration: text-line-through; }
+.text-line-through { text-decoration: strikethrough; }
 
-.line-through-hover:hover { text-decoration: text-line-through; }
+.text-line-through-hover:hover { text-decoration: strikethrough; }
 
-.no-line-through { text-decoration: none !important; }
+.no-text-line-through { text-decoration: none !important; }
 
-.underline { text-decoration: text-underline; }
+.text-underline { text-decoration: underline; }
 
-.underline-hover:hover { text-decoration: text-underline; }
+.text-underline-hover:hover { text-decoration: underline; }
 
-.no-underline { text-decoration: none !important; }
+.no-text-underline { text-decoration: none !important; }
 
 .text-13 { font-size: 13px; }
 
@@ -6001,7 +6001,7 @@ img { max-width: 100%; }
 
 .z-index-9999 { z-index: 9999; }
 
-body { font-family: "Open Sans"; font-weight: 400; }
+body { font-family: "Open Sans"; font-weight: 400; color: #757575; }
 
 .form-group { margin-bottom: 10px; }
 
@@ -6009,7 +6009,7 @@ body { font-family: "Open Sans"; font-weight: 400; }
 
 .gutter-2 .columns-6 { padding: 0 5px; }
 
-input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="url"], input[type="date"], input[type="tel"], input[type="search"], select, textarea { -moz-appearance: none; appearance: none; -webkit-appearance: none; outline: none; text-decoration: none; width: 100%; height: 50px; font-weight: 300; padding-left: 15px; font-family: "Open Sans"; font-size: 15px; border: 0; border-radius: 3px; }
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="url"], input[type="date"], input[type="tel"], input[type="search"], select, textarea { -moz-appearance: none; appearance: none; -webkit-appearance: none; outline: none; text-decoration: none; width: 100%; height: 50px; font-weight: 300; padding-left: 20px; font-family: "Open Sans"; font-size: 15px; border: 0; border-radius: 3px; }
 
 input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #808080; }
 
@@ -6051,9 +6051,13 @@ h1, h2, h3, h4, h5 { font-weight: 300; font-family: "Roboto"; }
   .navigation .navigation-link { display: table-cell; vertical-align: middle; color: white; padding-right: 40px; font-weight: 100; font-size: 18px; padding-top: 17px; }
   .navigation .navigation-link a { opacity: 0.8; } }
 
+.floating-thing { background: #616161; padding: 15px; font-size: 13px; border-radius: 3px; color: white; position: absolute; width: 250px; z-index: 9999; right: -120px; top: -15px; }
+
+.floating-thing:after { height: 0; width: 0; content: ""; border-top: 10px solid transparent; border-right: 10px solid #616161; border-bottom: 10px solid transparent; position: absolute; left: -10px; top: 50%; margin-top: -10px; }
+
 .site-container { max-width: 1080px; margin: 0 auto; padding: 0 15px; }
 
-.dotted-line { width: 2px; background-image: url("../images/line.png"); }
+.dotted-line { width: 2px; position: relative; left: -1px; background: #5fafaf; }
 
 .masthead { background-repeat: no-repeat; background-position: center; background-size: cover; display: table; width: 100%; padding: 0 15px; color: white; height: 450px; background-image: url("../images/background/bg.jpg"); }
 
@@ -6087,7 +6091,7 @@ h1, h2, h3, h4, h5 { font-weight: 300; font-family: "Roboto"; }
 
 @media (min-width: 1000px) { .solution-tabs-body.is-open { display: block; } }
 
-.solution-tabs-headline { font-size: 18px; margin-bottom: 30px !important; }
+.solution-tabs-headline { font-size: 18px; font-weight: 100; margin-bottom: 30px !important; }
 
 @media (min-width: 1000px) { .solution-tabs-headline { font-size: 20px; } }
 
@@ -6119,7 +6123,15 @@ h1, h2, h3, h4, h5 { font-weight: 300; font-family: "Roboto"; }
 
 @media (min-width: 1000px) { .solution-tabs-navigation > li { width: 25%; padding: 0 10px; } }
 
-.solution-tabs-navigation > li .inner { padding: 30px; display: block; border-radius: 3px 3px 0 0; cursor: pointer; transition: all .25s; }
+.solution-tabs-navigation > li .glyph { vertical-align: middle; display: inline-block; padding-right: 5px; }
+
+.solution-tabs-navigation > li .glyph img { width: 40px; }
+
+.solution-tabs-navigation > li .text { font-family: "Roboto"; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; vertical-align: middle; display: inline-block; line-height: 1.5; position: relative; top: 3px; text-align: left; font-weight: 300; }
+
+.solution-tabs-navigation > li .text span { font-weight: 500; }
+
+.solution-tabs-navigation > li .inner { padding: 15px; display: block; border-radius: 3px 3px 0 0; cursor: pointer; transition: all .25s; color: white; }
 
 .solution-tabs-navigation > li .inner .colour { display: none; }
 
@@ -6131,7 +6143,7 @@ h1, h2, h3, h4, h5 { font-weight: 300; font-family: "Roboto"; }
 
 .solution-tabs-navigation > li .inner:hover img { opacity: 1; }
 
-.solution-tabs-navigation > li .inner.is-active { background-color: white; border-radius: 3px 3px 0 0; box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.05); }
+.solution-tabs-navigation > li .inner.is-active { background-color: white; border-radius: 3px 3px 0 0; box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.05); color: #5fafaf; }
 
 .solution-tabs-navigation > li .inner.is-active img { opacity: 1; }
 
@@ -6173,7 +6185,7 @@ p:not(:last-child) { margin-bottom: 25px; }
 
 @media (min-width: 1000px) { .section-title { font-size: 32px; } }
 
-.panel { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); background-color: white; border-radius: 3px; }
+.panel { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); background-color: white; border-radius: 3px; }
 
 @media (min-width: 1000px) { .section-solutions, .section-approach { padding-top: 200px; } }
 

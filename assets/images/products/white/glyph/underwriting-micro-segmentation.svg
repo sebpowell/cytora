@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="65px" viewBox="0 0 64 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>underwriting-micro-segmentation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1121.000000, -263.000000)">
+            <g id="underwriting-micro-segmentation" transform="translate(1123.000000, 265.000000)">
+                <g id="underwriting-microsegmentation">
+                    <g>
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="2" cx="30" cy="30.9674819" r="31"></circle>
+                        <g id="Group-6" transform="translate(9.819672, 16.721311)" fill="#FFFFFF">
+                            <g id="Group-5" transform="translate(-0.000000, 0.000000)">
+                                <g id="Group-4" transform="translate(18.172785, 17.197868) rotate(-15.000000) translate(-18.172785, -17.197868) translate(3.172785, 4.697868)" fill-opacity="0.4">
+                                    <path d="M11.6398435,14.0886177 L19.8806322,16.2967304 C20.5331441,15.1223896 21.6006022,14.2559696 22.8396083,13.8377208 L19.6052664,1.72583998 L21.5375571,1.20984341 L24.8371647,13.5661295 C25.1990964,13.5863454 25.5644314,13.6438782 25.9284864,13.7414265 C28.7769705,14.5046755 30.4684381,17.4286433 29.7064849,20.2722912 C28.9445317,23.1159392 26.017694,24.8024358 23.1692099,24.0391868 C20.5513133,23.3377235 18.9106921,20.8112067 19.2537134,18.1993004 L11.027765,15.9951641 C9.87616036,18.1065281 7.38954837,19.2377552 4.95994018,18.5867437 C2.11145607,17.8234947 0.419988545,14.8995269 1.18194172,12.055879 C1.9438949,9.21223099 4.87073262,7.52573442 7.71921673,8.28898343 C8.31394558,8.44834055 8.85823734,8.7018885 9.34029272,9.02923034 L18.0920891,0.292292704 L19.5051006,1.7077073 L10.7544037,10.4435474 C11.4642849,11.4874067 11.8020447,12.7760939 11.6398435,14.0886177 L11.6398435,14.0886177 Z" id="Combined-Shape"></path>
+                                </g>
+                                <ellipse id="Oval-4" cx="19.6885246" cy="5.33051296" rx="5.33957845" ry="5.33051296"></ellipse>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -10,37 +10,43 @@ block body
 	.section
 		.container
 			.margin-bottom-8.text-center
-				.max-width-700.margin-auto
-					p.text-24.text-32-above-medium.text-brand.weight-bold Improve your loss ratio by up to 8%
+				.max-width-700.margin-auto.text-center
+					p.text-24.text-32-above-medium.text-brand.weight-bold Improve your loss ratios by up to 8%
 					p.text-16.text-18-above-medium Insurers who have a data and analytics advantage will identify the most profitable segments and compete on winning the best performing risks. The Cytora Risk Engine powers a range of products to improve risk selection, both at the portfolio level and at the point of underwriting.
-
-
-			.margin-bottom-8.hide-below-m
-				.max-width-900.margin-auto
-					.panel.padding-10-above-m
-						img(src="#{images}/top/2.png")
 
 			.text-center
 				a(href="#" class="button button-brand") Read the case study
 
 	.section.background-brand.section-tabs
-		.container.max-width-1200
+		.site-container
 			h2.section-title.text-white.margin-bottom-6 Improve loss ratio toolkit
 			.solution-tabs
 				ul.solution-tabs-navigation
 					li
 						a.inner.is-active(href="submission-scoring")
-							img.white(src="#{images}/products/white/submission-scoring.svg")
-							img.colour(src="#{images}/products/colour/submission-scoring.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/submission-scoring.svg")
+								img.colour(src="#{images}/products/green/glyph/submission-scoring.svg")
+							.text
+								span Submission </br>
+								| Enrichment
 					li
 						a.inner(href="pricing-automation")
-							img.white(src="#{images}/products/white/pricing-automation.svg")
-							img.colour(src="#{images}/products/colour/pricing-automation.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/pricing-automation.svg")
+								img.colour(src="#{images}/products/green/glyph/pricing-automation.svg")
+							.text
+								span Pricing </br>
+								| Automation
 
 					li
 						a.inner(href="underwriting-micro-segmentation")
-							img.white(src="#{images}/products/white/underwriting-micro-segmentation.svg")
-							img.colour(src="#{images}/products/colour/underwriting-micro-segmentation.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/underwriting-micro-segmentation.svg")
+								img.colour(src="#{images}/products/green/glyph/underwriting-micro-segmentation.svg")
+							.text
+								span Underwriting </br>
+								| Micro-segmentation
 
 
 				.solution-tabs-body.is-open(id="submission-scoring")					
@@ -111,4 +117,4 @@ block body
 
 	+contact()
 
-	+more()
+	+more('loss-ratios')

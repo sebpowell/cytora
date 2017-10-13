@@ -11,13 +11,13 @@ block body
 		.container.text-center
 			.margin-bottom-8
 				
-				h2.section-title.margin-bottom-4 Automated decisions for small to mid-market lines
+				h2.section-title.margin-bottom-6.text-brand.weight-bold Automated decisions for small to mid-market lines
 				.max-width-700.margin-auto
 					p.text-16.text-18-above-medium Underwriters often receive incomplete submissions, making it difficult for them to select and price risk efficiently. The Cytora Risk Engine pre-computes granular risk scores and accurate technical prices for every potential insured prior to any interaction with an underwriter, enabling automated decisions for small to mid-market lines, and timely assessment of complex risks.
 
-			.margin-bottom-10
-				.max-width-600.margin-auto
-					img(src="#{images}/top/3.png")
+			//- .margin-bottom-10
+			//- 	.max-width-600.margin-auto
+			//- 		img(src="#{images}/top/3.png")
 
 			.text-center
 				a(href="#" class="button button-brand") Read the case study
@@ -29,22 +29,39 @@ block body
 				ul.solution-tabs-navigation
 					li
 						a.inner.is-active(href="predictive-lead-generation")
-							img.white(src="#{images}/products/white/predictive-lead-generation.svg")
-							img.colour(src="#{images}/products/colour/predictive-lead-generation.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/predictive-lead-generation.svg")
+								img.colour(src="#{images}/products/green/glyph/predictive-lead-generation.svg")
+							.text
+								span Predictive </br>
+								| Lead Generation
+
 					li
 						a.inner(href="pricing-automation")
-							img.white(src="#{images}/products/white/pricing-automation.svg")
-							img.colour(src="#{images}/products/colour/pricing-automation.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/pricing-automation.svg")
+								img.colour(src="#{images}/products/green/glyph/pricing-automation.svg")
+							.text
+								span Pricing </br>
+								| Automation
 
 					li
 						a.inner(href="submission-scoring")
-							img.white(src="#{images}/products/white/submission-scoring.svg")
-							img.colour(src="#{images}/products/colour/submission-scoring.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/submission-scoring.svg")
+								img.colour(src="#{images}/products/green/glyph/submission-scoring.svg")
+							.text
+								span Submission </br>
+								| Enrichment
 
 					li
 						a.inner(href="broker-benchmarking")
-							img.white(src="#{images}/products/white/broker-benchmarking.svg")
-							img.colour(src="#{images}/products/colour/broker-benchmarking.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/broker-benchmarking.svg")
+								img.colour(src="#{images}/products/green/glyph/broker-benchmarking.svg")
+							.text
+								span Broker </br>
+								| Benchmarking
 
 
 				.solution-tabs-body.is-open(id="predictive-lead-generation")					
@@ -134,4 +151,4 @@ block body
 
 	+contact()
 
-	+more()
+	+more('expense-ratios')

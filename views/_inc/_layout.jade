@@ -34,11 +34,17 @@ body
 	.navigation
 		.site-container
 			.display-table.height-100
-				.navigation-logo.navigation-link
+				a.navigation-logo.navigation-link(href="/")
 					img(src="#{images}/logo-white.png")
 				.navigation-link.dropdown
 					a Solutions
 					.dropdown-menu
+						a(href="/improve-loss-ratio.html")
+							.display-table-cell.vertical-align-top
+								img(src="#{images}/icons/expense-ratio.png" width="50")
+							.display-table-cell.vertical-align-middle.padding-left-1
+								.text-15.text-brand.weight-bold.margin-bottom-1 Improve loss ratios
+								.text-muted.text-13 Select the best risks, set the right price.
 						a(href="/grow-premium.html")
 							.display-table-cell.vertical-align-top
 								img(src="#{images}/icons/grow-premium.png" width="50")
@@ -49,14 +55,9 @@ body
 							.display-table-cell.vertical-align-top
 								img(src="#{images}/icons/expense-ratio.png" width="50")
 							.display-table-cell.vertical-align-middle.padding-left-1
-								.text-15.text-brand.weight-bold.margin-bottom-1 Expense ratio
+								.text-15.text-brand.weight-bold.margin-bottom-1 Improve expense ratios
 								.text-muted.text-13 Select the best risks, set the right price.
-						a(href="/improve-loss-ratio.html")
-							.display-table-cell.vertical-align-top
-								img(src="#{images}/icons/expense-ratio.png" width="50")
-							.display-table-cell.vertical-align-middle.padding-left-1
-								.text-15.text-brand.weight-bold.margin-bottom-1 Improve loss ratio
-								.text-muted.text-13 Select the best risks, set the right price.
+						
 				.navigation-link
 					a Technology
 				.navigation-link

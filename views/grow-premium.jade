@@ -10,14 +10,9 @@ block body
 	.section
 		.container
 			.margin-bottom-8
-				.max-width-700.margin-auto
-					h2.section-title.margin-bottom-6 Grow premium by up to 3%
+				.max-width-700.margin-auto.text-center
+					h2.section-title.margin-bottom-6.text-brand.weight-bold Grow premium by up to 3%
 					p.text-16.text-18-above-medium There are good and bad segments in every area of the market. To identify where to target new business, you need access to a market-wide view of risks to guide your decision making. The Cytora Risk Engine reveals growth opportunities within your existing portfolio and profitable new segments outside of your exposure.
-			.margin-bottom-8.hide-below-m
-				.max-width-900.margin-auto
-					.panel.padding-10-above-m
-						img(src="#{images}/top/1.png")
-
 			.text-center
 				a(href="#" class="button button-brand") Read the case study
 
@@ -28,23 +23,38 @@ block body
 				ul.solution-tabs-navigation
 					li
 						a.inner.is-active(href="p")
-							img.white(src="#{images}/products/white/portfolio-benchmarking.svg")
-							img.colour(src="#{images}/products/colour/portfolio-benchmarking.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/portfolio-benchmarking.svg")
+								img.colour(src="#{images}/products/green/glyph/portfolio-benchmarking.svg")
+							.text
+								span Portfolio </br>
+								| Benchmarking
 					li
 						a.inner(href="predictive-lead-generation")
-							img.white(src="#{images}/products/white/predictive-lead-generation.svg")
-							img.colour(src="#{images}/products/colour/predictive-lead-generation.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/predictive-lead-generation.svg")
+								img.colour(src="#{images}/products/green/glyph/predictive-lead-generation.svg")
+							.text
+								span Predictive </br>
+								| Lead Generation
 
 					li
 						a.inner(href="underwriting-micro-segmentation")
-							img.white(src="#{images}/products/white/underwriting-micro-segmentation.svg")
-							img.colour(src="#{images}/products/colour/underwriting-micro-segmentation.svg")
+							.glyph
+								img.white(src="#{images}/products/white/glyph/underwriting-micro-segmentation.svg")
+								img.colour(src="#{images}/products/green/glyph/underwriting-micro-segmentation.svg")
+							.text
+								span Underwriting </br>
+								| Micro-segmentation
 
 					li
 						a.inner(href="broker-benchmarking")
-							img.white(src="#{images}/products/white/broker-benchmarking.svg")
-							img.colour(src="#{images}/products/colour/broker-benchmarking.svg")
-
+							.glyph
+								img.white(src="#{images}/products/white/glyph/broker-benchmarking.svg")
+								img.colour(src="#{images}/products/green/glyph/broker-benchmarking.svg")
+							.text
+								span Broker </br>
+								| Benchmarking
 
 				.solution-tabs-body.is-open(id="p")					
 					.solution-tabs-panel-left
@@ -87,7 +97,7 @@ block body
 								p Target leads in the best performing segments to grow your book in the right areas.
 					
 					.solution-tabs-panel-right.display-table-cell.vertical-align-middle
-						img.solution-tabs-illustration(src="#{images}/illustrations/pricing-automation.png")
+						img.solution-tabs-illustration(src="#{images}/illustrations/predictive-lead-generation.png")
 
 				.solution-tabs-body(id="underwriting-micro-segmentation")					
 					.solution-tabs-panel-left
@@ -134,4 +144,4 @@ block body
 
 	+contact()
 
-	+more()
+	+more('grow-premium')

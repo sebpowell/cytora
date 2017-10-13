@@ -3,27 +3,23 @@ mixin contact()
 		.site-container
 			h2.section-title.text-white.margin-bottom-8 Contact us to speak to an expert
 
-			.columns
-				.columns-7
-					.form-group
-						.columns.gutter-2
-							.columns-6
-								input(type="text" placeholder="Your name")
-							.columns-6
-								input(type="text" placeholder="Company")
-					.form-group
-						input(type="email" placeholder="Email address")
+			.max-width-600.margin-auto
+				.form-group
+					.columns.gutter-2
+						.columns-6
+							input(type="text" placeholder="Your name")
+						.columns-6
+							input(type="text" placeholder="Company")
+				.form-group
+					input(type="email" placeholder="Email address")
 
-					.form-group
-						input(type="tel" placeholder="Phone number")
+				.form-group
+					input(type="tel" placeholder="Phone number")
 
-					.button.button-brand-dark.width-100.button-50.margin-bottom-3 Request callback
+				.button.button-brand-dark.width-100.button-50.margin-bottom-3 Request callback
 
-					.text-center.text-white
-						p Or give us a call on 0207 890 890
-				.columns-5
-					.contact-quote
-						p "Mixpanel enables DocuSign to be successful because it enables our customers to be successful. What started as a need for simple marketing metrics turned into custom product metrics for over 100 different stakeholders across the company."                        
+				.text-center.text-white
+					p Or give us a call on 0207 890 890                       
 
 
 mixin solutions()
@@ -51,31 +47,39 @@ mixin solutions()
 				.columns-4.display-flex-above-l
 					.panel.padding-10.text-center.max-width-400.margin-auto
 						img.margin-bottom-4(src="#{images}/icons/expense-ratio.png" width="80")
-						h2.margin-bottom-2.text-brand.text-16 Improve your expense ratio
+						h2.margin-bottom-2.text-brand.text-16 Improve expense ratios
 						div(style="height: 130px")
 							p.text-14.text-muted Automate processes and optimise the ratio of risks submitted to risks bound. 
 							a(href="#" class="button button-brand") Learn more
 
 
-mixin more()
+mixin more(hide)
 	.section.no-padding
 		.site-container
 			.columns.no-gutter
-				.columns-6
+				.columns-6(class="#{ hide === 'grow-premium' ? 'is-hidden' : ''}")
 					.more-info-contant.border-right-above-l.border-bottom-below-l
 						.display-table-cell.vertical-align-middle
-							img.margin-bottom-3(src="#{images}/icons/grow-premium.png" width="80")
+							img.margin-bottom-3(src="#{images}/icons/grow-premium.png" width="60")
 							h2.text-brand.margin-bottom-3 Grow premium
 							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
-							a(href="#" class="button button-brand") Learn more
+							a(href="/grow-premium.html" class="button button-brand") Learn more
 
-				.columns-6
+				.columns-6(class="#{ hide === 'loss-ratios' ? 'is-hidden' : ''}")
+					.more-info-contant.border-right-above-l.border-bottom-below-l
+						.display-table-cell.vertical-align-middle
+							img.margin-bottom-3(src="#{images}/icons/expense-ratio.png" width="60")
+							h2.text-brand.margin-bottom-3 Improve loss ratios
+							p.text-muted Continuously tune your portfolio </br> in response to changing market dynamics.
+							a(href="/improve-loss-ratio.html" class="button button-brand") Learn more
+
+				.columns-6(class="#{ hide === 'expense-ratios' ? 'is-hidden' : ''}")
 					.more-info-contant
 						.display-table-cell.vertical-align-middle
-							img.margin-bottom-3(src="#{images}/icons/grow-premium.png" width="80")
-							h2.text-brand.margin-bottom-3 Grow premium
-							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
-							a(href="#" class="button button-brand") Learn more
+							img.margin-bottom-3(src="#{images}/icons/expense-ratio.png" width="60")
+							h2.text-brand.margin-bottom-3 Improve expense ratios
+							p.text-muted Automate processes and optimise </br> the ratio of risks submitted to risks bound. 
+							a(href="/expense-ratio.html" class="button button-brand") Learn more
 
 
 mixin approach()
