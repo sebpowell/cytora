@@ -1,0 +1,38 @@
+.masthead {
+	@include background-image();
+	display: table;
+	width: 100%;
+	padding: $gutter;
+	color: white;
+	height: 450px;
+	background-image: url('../images/background/bg.jpg');
+
+	@include if-above("l") {
+		height: 650px;
+	}
+
+	.masthead-title {
+		@include uppercase(0.01em);
+		font-size: 28px;
+		font-weight: 300;
+		line-height: 1.2;
+		font-weight: black;
+		max-width: 500px;
+		margin: 0 auto sizes(2);
+		@include if-above("l") {
+			font-size: 42px;
+		}
+	}
+
+	.masthead-sub {
+		max-width: 300px;
+		margin: 0 auto sizes(4);
+		font-size: 15px;
+		opacity: 0.75;
+		font-weight: 100;
+		@include if-above("l") {
+			font-size: 18px;
+			max-width: 400px;
+		}
+	}
+}

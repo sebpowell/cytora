@@ -6,8 +6,9 @@ mixin contact()
 			.max-width-600.margin-auto
 				.form-group
 					.columns.gutter-2
-						.columns-6
-							input(type="text" placeholder="Your name")
+						.columns-6.no-margin
+							.margin-bottom-2-below-l
+								input(type="text" placeholder="Your name")
 						.columns-6
 							input(type="text" placeholder="Company")
 				.form-group
@@ -55,9 +56,9 @@ mixin solutions()
 
 mixin more(hide)
 	.section.no-padding
-		.site-container
+		.site-container.no-padding
 			.columns.no-gutter
-				.columns-6(class="#{ hide === 'grow-premium' ? 'is-hidden' : ''}")
+				.columns-6(class="no-margin #{ hide === 'grow-premium' ? 'is-hidden' : ''}")
 					.more-info-contant.border-right-above-l.border-bottom-below-l
 						.display-table-cell.vertical-align-middle
 							img.margin-bottom-3(src="#{images}/icons/grow-premium.png" width="60")
@@ -65,18 +66,18 @@ mixin more(hide)
 							p.text-muted Target the most attractive risks </br> in segments you’re already writing.
 							a(href="/grow-premium.html" class="button button-brand") Learn more
 
-				.columns-6(class="#{ hide === 'loss-ratios' ? 'is-hidden' : ''}")
-					.more-info-contant.border-right-above-l.border-bottom-below-l
+				.columns-6(class="no-margin #{ hide === 'loss-ratios' ? 'is-hidden' : ''}")
+					.more-info-contant.border-bottom-below-l
 						.display-table-cell.vertical-align-middle
 							img.margin-bottom-3(src="#{images}/icons/expense-ratio.png" width="60")
 							h2.text-brand.margin-bottom-3 Improve loss ratios
 							p.text-muted Continuously tune your portfolio </br> in response to changing market dynamics.
 							a(href="/improve-loss-ratio.html" class="button button-brand") Learn more
 
-				.columns-6(class="#{ hide === 'expense-ratios' ? 'is-hidden' : ''}")
+				.columns-6(class="no-margin #{ hide === 'expense-ratios' ? 'is-hidden' : ''}")
 					.more-info-contant
 						.display-table-cell.vertical-align-middle
-							img.margin-bottom-3(src="#{images}/icons/expense-ratio.png" width="60")
+							img.margin-bottom-3(src="#{images}/icons/lower-expense.png" width="60")
 							h2.text-brand.margin-bottom-3 Improve expense ratios
 							p.text-muted Automate processes and optimise </br> the ratio of risks submitted to risks bound. 
 							a(href="/expense-ratio.html" class="button button-brand") Learn more
@@ -89,20 +90,20 @@ mixin approach()
 
 			.columns.display-flex-above-l.flex-column
 				.columns-4.display-flex-above-l
-					.panel.padding-12.text-center.width-100.max-width-400.margin-auto
+					.panel.padding-8.text-center.width-100.max-width-400.margin-auto
 						img.margin-bottom-4(src="#{images}/icons/scale.png" width="40")
 						h2.margin-bottom-2.text-brand.text-18 Population Scale
 						p.text-14.text-muted Every insurable risk is </br> known and ranked.
 
 				.columns-4.display-flex-above-l
-					.panel.padding-12.text-center.width-100.max-width-400.margin-auto
+					.panel.padding-8.text-center.width-100.max-width-400.margin-auto
 						img.margin-bottom-4(src="#{images}/icons/time.png" width="40")
 						h2.margin-bottom-2.text-brand.text-18 Real-time
 						p.text-14.text-muted Data is updated continuously.
 
 				.columns-4.display-flex-above-l
-					.panel.padding-12.text-center.width-100.max-width-400.margin-auto
-						img.margin-bottom-4(src="#{images}/icons/scale.png" width="40")
+					.panel.padding-8.text-center.width-100.max-width-400.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/algorithm.png" width="40")
 						h2.margin-bottom-2.text-brand.text-18 Algorithmic
 						p.text-14.text-muted  5 years for a human to read the data processed daily,
 

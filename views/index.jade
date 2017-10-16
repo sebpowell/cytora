@@ -51,12 +51,9 @@ block body
 					p
 						a.text-brand.text-underline-hover(href="https://cytora.com/news/2017/5/16/professor-ted-briscoe-joins-cytora-as-a-scientific-advisor") Supported by world-leading machine learning and risk modelling experts
 
-
-
-
 	.section
 		.container.max-width-700.margin-auto.text-center
-			p.text-24.text-32-above-medium.text-brand.weight-bold Cytora enables commercial insurers to grow premium by up to 3% while improving loss ratios by up to 8%
+			p.text-24.text-32-above-medium.text-brand.weight-bold.margin-bottom-4 Cytora enables commercial insurers to grow premium by up to 3% while improving loss ratios by up to 8%
 			p.text-16.text-18-above-medium Our Risk Engine unlocks superior selection, targeting and pricing solutions that are driven by proprietary machine learning algorithms, developed by one of the most sophisticated teams of PhD-level data scientists in insurance.
 
 			a(href="#" class="button button-brand") Read the case study
@@ -64,7 +61,7 @@ block body
 
 	.section.background-greyscale-100
 		.site-container
-			h2.section-title.margin-bottom-4 How does the Cytora Risk Engine work?
+			h2.section-title.margin-bottom-4.text-brand How does the Cytora Risk Engine work?
 			.margin-bottom-8
 				p.max-width-600.margin-auto.text-center The Cytora Risk Engine continuously ingests data from tens of thousands of different sources into risk scores, prices, and insights that reveal and predict future claims, attractive risks and overall risk quality.
 
@@ -78,32 +75,42 @@ block body
 				h2.margin-bottom-2.text-brand.text-20 Tuned against insurer’s internal data
 				p.text-14.text-muted Claims, Exposure, Submissions
 
+
+			.hide-above-l
+				.dotted-line.margin-auto(style="height: 50px")
+
+				.panel.padding-6.text-center.width-100.max-width-300.margin-auto
+					p.text-14 Data is continuously ingested,  cleaned, structured, normalised and run through a series of machine learning algorithms.
+
 			.dotted-line.margin-auto(style="height: 50px")
 
 			.max-width-400.margin-auto.text-center.position-relative
 				.floating-thing
-					p Data is continuously ingested,  cleaned, structured, normalised and run through a series of machine learning algorithms.
+					p.text-13 Data is continuously ingested,  cleaned, structured, normalised and run through a series of machine learning algorithms.
 				img(src="#{images}/thing.png" width="80")
 
 			.dotted-line.margin-auto(style="height: 50px")
 
 			.columns.display-flex-above-l.flex-column
-				.columns-4.display-flex-above-l
-					.panel.padding-6.text-center.max-width-400.margin-auto
-						img.margin-bottom-4(src="#{images}/icons/expense-ratio.png" width="40")
-						h2.margin-bottom-2.text-brand.text-16 Improve loss ratios
+				.columns-4.display-flex-above-l.no-margin
+					.panel.padding-6.text-center.max-width-300.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/expense-ratio.png" width="60")
+						h2.margin-bottom-2.text-brand.text-20 Improve loss ratios
 						p.text-14.text-muted Continuously tune your portfolio in response to changing market dynamics.
 
-				.columns-4.display-flex-above-l
-					.panel.padding-6.text-center.max-width-400.margin-auto
-						img.margin-bottom-4(src="#{images}/icons/grow-premium.png" width="40")
-						h2.margin-bottom-2.text-brand.text-16 Grow premium
-						p.text-14.text-muted Identify profitable segments outside of your current appetite.
+					.dotted-line.margin-auto.hide-above-l(style="height: 50px")
 
-				.columns-4.display-flex-above-l
-					.panel.padding-6.text-center.max-width-400.margin-auto
-						img.margin-bottom-4(src="#{images}/icons/expense-ratio.png" width="40")
-						h2.margin-bottom-2.text-brand.text-16 Improve expense ratios
+				.columns-4.display-flex-above-l.no-margin
+					.panel.padding-6.text-center.max-width-300.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/grow-premium.png" width="60")
+						h2.margin-bottom-2.text-brand.text-20 Grow premium
+						p.text-14.text-muted Identify profitable segments outside of your current appetite.
+					.dotted-line.margin-auto.hide-above-l(style="height: 50px")
+
+				.columns-4.display-flex-above-l.no-margin
+					.panel.padding-6.text-center.max-width-300.margin-auto
+						img.margin-bottom-4(src="#{images}/icons/lower-expense.png" width="60")
+						h2.margin-bottom-2.text-brand.text-20 Improve expense ratios
 						p.text-14.text-muted Automate processes and optimise the ratio of risks submitted to risks bound. 
 
 	//- +approach()

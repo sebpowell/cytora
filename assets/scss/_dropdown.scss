@@ -1,0 +1,43 @@
+.dropdown {
+	position: relative;
+}
+
+.dropdown-menu {
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0 5px 10px rgba(00,00,00,0.2);
+	width: 400px;
+	position: absolute;
+	top: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-50px);
+	transition: all .25s;
+	z-index: 5;
+
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	&:after {
+		@include arrow("up", white, 5px);
+		content: "";
+		position: absolute;
+		top: -5px;
+		left: 20px;
+	}
+
+	a {
+		padding: sizes(4) sizes(5);
+		display: table;
+		width: 100%;
+		&:not(:last-of-type) {
+			border-bottom: 1px solid colors("keyline");
+		}
+		&:hover {
+			background-color: colors("greyscale", 100);
+		}
+	}
+}
